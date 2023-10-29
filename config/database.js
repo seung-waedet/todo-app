@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
-  mongoURI: 'mongodb://localhost/tododb-dev'
+  mongoURI: process.env.MONGODB_URI
 }

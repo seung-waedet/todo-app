@@ -1,27 +1,32 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 // create schema
 const TodoSchema = new Schema({
   title: {
     type: String,
-    required: true
+    required: true,
   },
   details: {
     type: String,
-    required: true
+    required: true,
+  },
+  status: {
+    type: String,
+    enum: ["pending", "completed", "deleted"],
+    default: "pending",
   },
   user: {
     type: String,
-    required: true
+    required: true,
   },
   creationDate: {
     type: Date,
-    default: Date.now
+    default: Date.now,
   },
   dueDate: {
-    type: String
-  }
+    type: String,
+  },
 });
 
-mongoose.model('todos', TodoSchema);
+mongoose.model("todos", TodoSchema);
