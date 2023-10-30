@@ -1,9 +1,10 @@
 module.exports = {
-  ensureAuthenticated: function(req, res, next) {
-    if (req.isAuthenticated()) { // because of passport
+  ensureAuthenticated: function (req, res, next) {
+    if (req.isAuthenticated()) {
+      // because of passport
       return next();
     }
-    req.flash('error_msg', 'Not authorized');
-    res.redirect('/users/login');
-  }
-}
+    req.flash("error_msg", "Not authorized");
+    res.redirect("/users/login");
+  },
+};
