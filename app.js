@@ -2,7 +2,7 @@
 // mongodb start (form workspace folder): ../mongostart
 
 const express = require("express");
-const path = require("node:path");
+const path = require("path");
 const exphbs = require("express-handlebars");
 
 const bodyParser = require("body-parser");
