@@ -20,8 +20,9 @@ const todos = require("./routes/todos");
 const users = require("./routes/users");
 
 // logger
-
 app.use(logger("dev"));
+
+// Testing SSH with Linux
 
 // passport config
 require("./config/passport")(passport);
